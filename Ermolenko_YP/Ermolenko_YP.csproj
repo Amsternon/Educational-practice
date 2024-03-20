@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="11.0.2" />
+        <PackageReference Include="Avalonia.Desktop" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.2"/>
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.0.2"/>
+        <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.2"/>
+        <PackageReference Include="ic4dotnet.System.Windows.Forms" Version="1.1.0.2486-test" />
+        <PackageReference Include="ic4dotnet.System.Windows.Media" Version="1.1.0.2486-test" />
+        <PackageReference Include="MySql.Data" Version="8.3.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Folder Include="Gallery\" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <None Remove="Gallery\diz.jpg" />
+      <AvaloniaResource Include="Gallery\diz.jpg" />
+      <None Remove="Gallery\rulevoe-upravlenie-avtomobilya.jpg" />
+      <AvaloniaResource Include="Gallery\rulevoe-upravlenie-avtomobilya.jpg" />
+      <None Remove="Gallery\service_logo.ico" />
+      <AvaloniaResource Include="Gallery\service_logo.ico" />
+      <None Remove="Gallery\service_logo.png" />
+      <AvaloniaResource Include="Gallery\service_logo.png" />
+      <None Remove="Gallery\transmission.jpg" />
+      <AvaloniaResource Include="Gallery\transmission.jpg" />
+      <None Remove="Gallery\АКПП.jpg" />
+      <AvaloniaResource Include="Gallery\АКПП.jpg" />
+      <None Remove="Gallery\Вариатор.jpg" />
+      <AvaloniaResource Include="Gallery\Вариатор.jpg" />
+      <None Remove="Gallery\Выхлопная система.jpg" />
+      <AvaloniaResource Include="Gallery\Выхлопная система.jpg" />
+      <None Remove="Gallery\ГУР.png" />
+      <AvaloniaResource Include="Gallery\ГУР.png" />
+      <None Remove="Gallery\Двигатель.png" />
+      <AvaloniaResource Include="Gallery\Двигатель.png" />
+      <None Remove="Gallery\Кондиционер.jpg" />
+      <AvaloniaResource Include="Gallery\Кондиционер.jpg" />
+      <None Remove="Gallery\Дополнительные услуги.png" />
+      <AvaloniaResource Include="Gallery\Дополнительные услуги.png" />
+      <None Remove="Gallery\КПП.png" />
+      <AvaloniaResource Include="Gallery\КПП.png" />
+      <None Remove="Gallery\Подвеска.png" />
+      <AvaloniaResource Include="Gallery\Подвеска.png" />
+      <None Remove="Gallery\Сцепление.jpg" />
+      <AvaloniaResource Include="Gallery\Сцепление.jpg" />
+      <None Remove="Gallery\Техническое обслуживание.png" />
+      <AvaloniaResource Include="Gallery\Техническое обслуживание.png" />
+      <None Remove="Gallery\Топливная система.png" />
+      <AvaloniaResource Include="Gallery\Топливная система.png" />
+      <None Remove="Gallery\Шиномонтаж.jpg" />
+      <AvaloniaResource Include="Gallery\Шиномонтаж.jpg" />
+      <None Remove="Gallery\Электрика.png" />
+      <AvaloniaResource Include="Gallery\Электрика.png" />
+      <None Remove="Resource\back.ico" />
+      <AvaloniaResource Include="Resource\back.ico" />
+      <None Remove="Resource\Client.jpg" />
+      <AvaloniaResource Include="Resource\Client.jpg" />
+      <None Remove="Resource\ClientAdd.ico" />
+      <AvaloniaResource Include="Resource\ClientAdd.ico" />
+      <None Remove="Resource\Font.jpg" />
+      <AvaloniaResource Include="Resource\Font.jpg" />
+      <None Remove="Resource\Menu.jpg" />
+      <AvaloniaResource Include="Resource\Menu.jpg" />
+      <None Remove="Resource\menu.ico" />
+      <AvaloniaResource Include="Resource\menu.ico" />
+      <None Remove="Resource\OrdAdd.ico" />
+      <AvaloniaResource Include="Resource\OrdAdd.ico" />
+      <None Remove="Resource\Order.png" />
+      <AvaloniaResource Include="Resource\Order.png" />
+      <None Remove="Resource\Ordering.ico" />
+      <AvaloniaResource Include="Resource\Ordering.ico" />
+      <None Remove="Resource\posyd.ico" />
+      <AvaloniaResource Include="Resource\posyd.ico" />
+      <None Remove="Resource\posyda.jpg" />
+      <AvaloniaResource Include="Resource\posyda.jpg" />
+      <None Remove="Resource\red.ico" />
+      <AvaloniaResource Include="Resource\red.ico" />
+      <None Remove="Resource\Register.ico" />
+      <AvaloniaResource Include="Resource\Register.ico" />
+      <None Remove="Resource\Regst.jpg" />
+      <AvaloniaResource Include="Resource\Regst.jpg" />
+      <None Remove="Resource\reset.ico" />
+      <AvaloniaResource Include="Resource\reset.ico" />
+      <None Remove="Resource\Sotr.ico" />
+      <AvaloniaResource Include="Resource\Sotr.ico" />
+      <None Remove="Resource\Sotryd.png" />
+      <AvaloniaResource Include="Resource\Sotryd.png" />
+      <None Remove="Resource\trash.ico" />
+      <AvaloniaResource Include="Resource\trash.ico" />
+      <None Remove="Resource\user.ico" />
+      <AvaloniaResource Include="Resource\user.ico" />
+      <None Remove="Resource\Diagnost.jpeg" />
+      <AvaloniaResource Include="Resource\Diagnost.jpeg" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Compile Update="CRUD\CrudForm.axaml.cs">
+        <DependentUpon>CrudForm.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Active windows\MainWindow.axaml.cs">
+        <DependentUpon>MainWindow.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Active windows\Registration.axaml.cs">
+        <DependentUpon>Registration.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Active windows\service.axaml.cs">
+        <DependentUpon>service.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="Active windows\signups.axaml.cs">
+        <DependentUpon>signups.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+</Project>

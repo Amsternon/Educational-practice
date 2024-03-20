@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Ermolenko_YP/Active windows/Registration.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/Active windows/service.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/App.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/CRUD/CrudForm.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/CrudForm.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/MainWindow.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/Registration.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/SignUP.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/Tables/SignUP.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/Tables/service.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/service.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+        <entry key="Ermolenko_YP/signups.axaml" value="Ermolenko_YP/Ermolenko_YP.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

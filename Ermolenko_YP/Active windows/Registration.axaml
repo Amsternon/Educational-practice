@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        RequestedThemeVariant="Light"
+        Icon="C:\Users\vitsn\Desktop\Ermolenko_YP\Ermolenko_YP\Resource\Register.ico"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="510" d:DesignHeight="650"
+        x:Class="Ermolenko_YP.Registration"
+        Title="Регистрация пользователя"
+        MaxHeight="650"
+        WindowStartupLocation="CenterScreen"
+        MaxWidth="510">
+    <Grid>
+        <Image Source="C:\Users\vitsn\Desktop\Ermolenko_YP\Ermolenko_YP\Resource/Font.jpg"></Image>
+        <UniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Margin = "0 10 0 0" FontSize = "20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center">Регистрация</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Фамилия: </TextBlock>
+                <TextBox Name="Surname" x:CompileBindings="False" Width="300" Height="5" Margin = "50 0 0 0" Watermark="Введите Фамилию"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Имя: </TextBlock>
+                <TextBox Name="Name" x:CompileBindings="False" Width="300" Height="5" Margin = "85 0 0 0" Watermark="Введите Имя"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Отчество: </TextBlock>
+                <TextBox Name="lastname" x:CompileBindings="False" Width="300" Height="5" Margin = "50 0 0 0" Watermark="Введите Отчество"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Телефон: </TextBlock>
+                <TextBox Name="Telephone" x:CompileBindings="False" Width="300" Height="5" Margin = "56 0 0 0" Watermark="Используемый номер телефона"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Пол: </TextBlock>
+                <TextBox Name="Gender" x:CompileBindings="False" Width="300" Height="5" Margin = "85 0 0 0" Watermark="Введите Пол"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Дата Регистрации: </TextBlock>
+                <TextBox Name="DateReg" x:CompileBindings="False" Width="300" Height="5" Margin = "5 0 0 0" Watermark="Введите дату"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Логин: </TextBlock>
+                <TextBox Name="Log" x:CompileBindings="False" Width="300" Height="5" Margin = "72 0 0 0" Watermark="Введите адрес электронной почты"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Margin = "0 25 0 0">Пароль: </TextBlock>
+                <TextBox Name="Password" x:CompileBindings="False" Width="300" Height="5" Margin = "62 0 0 0" Watermark="Введите пароль для входа"></TextBox>
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button Name="Back" Background="Transparent" Foreground="black" Click="GoBack"  Margin = "105 15 25 10">
+                    <Image Width="65" Height="55" Source="avares://Ermolenko_YP/Resource/back.ico"></Image>
+                </Button>
+                <Button Name="Save" Background="Transparent" Foreground="black" Click="Regist"  Margin = "35 15 25 10"><Image Width="65" Height="45" Source="avares://Ermolenko_YP/Resource/ClientAdd.ico"></Image></Button>
+            </StackPanel>
+        </UniformGrid>
+    </Grid>
+</Window>

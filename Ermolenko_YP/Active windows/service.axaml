@@ -1,0 +1,87 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Icon="avares://Ermolenko_YP/Gallery/service_logo.ico"
+        mc:Ignorable="d" d:DesignWidth="880" d:DesignHeight="600"
+        MaxHeight="600"
+        MaxWidth="880"
+        x:Class="Ermolenko_YP.service"
+        Title="Услуги">
+    <Grid>
+        <Image Source="avares://Ermolenko_YP/Resource/Diagnost.jpeg"></Image>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+         <TextBlock Foreground="Khaki" HorizontalAlignment="Center" Margin = "10 10 0 0" FontSize = "20" FontWeight="Bold"> Таблица "Услуги"</TextBlock>
+         <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center" Background="Black" FontStyle="Normal" FontWeight="ExtraBold" Foreground="Khaki" Margin = "10 10 0 0"> Поиск по названию услуги: </TextBlock>
+            <TextBox Name="ServSearch" Width="150" Margin ="5 10 0 0" TextChanged="SearchService"></TextBox>
+            <StackPanel Margin="10 12 00 0">
+                <Button Background="White" Foreground="Black" Content="Сортировать по возрастанию цены" Click="SortAscending" Width="260"></Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock VerticalAlignment="Center"
+                       x:Name="FilterDiscont" Background="Black" FontWeight="ExtraBold" FontStyle="Normal" Foreground="Khaki" Margin ="10 10 0 0">Фильтрация по скидке: </TextBlock>
+            <ComboBox Name="DiscontComboBox"
+                      x:CompileBindings="False"
+                      SelectionChanged="DiscountFilter" Width="150" Margin ="32 10 0 0">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" TextAlignment="Center"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <StackPanel Margin="11 12 00 0">
+                <Button Background="White" Foreground="Black" Content="Сортировать по убыванию цены" Click="SortDescending" Width="260" ></Button>
+            </StackPanel>
+        </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="10 12 00 0">
+                            <Button Name="AddButton" Background='Aqua' Click="AddData">
+                                <Image Width="25" Height="25" Source="avares://Ermolenko_YP/Resource/OrdAdd.ico"></Image>
+                            </Button>
+                                </StackPanel>
+                                <StackPanel Margin="10 12 00 0">
+                                    <Button Name="EditButton" Background='Aqua' Click="Edit">
+                                        <Image Width="25" Height="25" Source="avares://Ermolenko_YP/Resource/red.ico"></Image>
+                                    </Button>
+                                </StackPanel>
+                                <StackPanel Margin="10 12 00 0">
+                                    <Button Name="DeleteButton" Background="Aqua" Click="DeleteData">
+                                        <Image Width="25" Height="25" Source="avares://Ermolenko_YP/Resource/trash.ico"></Image>
+                                    </Button>
+                                </StackPanel>
+                                <StackPanel Margin="10 12 00 0">
+                                    <Button VerticalAlignment="Center" HorizontalContentAlignment="Center"
+                                            Width="190" Height="38" Name="Sign" Background="Aqua" Foreground="Black"
+                                            Content="Подать заявку на запись" Click="Sign_OnClick">
+                                    </Button>
+                                </StackPanel>
+                        </StackPanel>
+                   <StackPanel>
+                <DataGrid Name="DataGrid" x:CompileBindings="False" Margin ="10 20 0 0" Height="330" IsReadOnly="True" ItemsSource="{Binding Items}">
+                           <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding ID}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Название услуги" Binding="{Binding Name}"></DataGridTextColumn>
+                            <DataGridTemplateColumn Header="Изображение">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding PhotoService}" Height="100" Width="100" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn  Header="Цена услуги" Binding="{Binding price}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Размер скидки" Binding="{Binding discount}"></DataGridTextColumn>
+                            <DataGridTextColumn Header="Цена со скидкой" Binding="{Binding discounted_price}"></DataGridTextColumn>
+                          </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                     <Button Name="Enter" Background="White" Foreground="Black" FontWeight="Bold" Content="Сменить аккаунт" Click="LogOut" Margin=" 10 15 15 10"></Button>
+                     <Button Name="Exit" Background="White" Foreground="Black" FontWeight="Bold" FontFamily="" Content="Закрыть программу" Click="Exit_Program" Margin=" 10 15 15 10"></Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
